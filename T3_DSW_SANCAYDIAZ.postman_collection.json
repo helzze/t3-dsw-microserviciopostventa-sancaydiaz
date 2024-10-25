@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "a20362f7-fdf8-4c78-9126-3ef596e0ac67",
+		"name": "T3_DSW_SANCAYDIAZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38701174"
+	},
+	"item": [
+		{
+			"name": "Listar Ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ventas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generar Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"v5\",\r\n    \"clienteId\": \"c1\",\r\n    \"vehiculoId\": \"vh2\",\r\n    \"monto\": 12000.00,\r\n    \"fecha\": \"2024-10-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ventas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Y Detallar Mantenimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"m4\",\r\n    \"clienteId\": \"c1\",\r\n    \"tipoServicio\": \"CAMBIO DE ACEITE DE TICO\",\r\n    \"fecha\": \"2024-10-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/clientes/mantenimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clientes",
+						"mantenimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Historial de Mantenimientos De Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/clientes/c1/historial",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clientes",
+						"c1",
+						"historial"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
